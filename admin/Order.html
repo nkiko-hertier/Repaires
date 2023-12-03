@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!--link to bootstrap4-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KG4lIkLdLMu7zjdyW+CiAZHPXcbxjD7/t78FcnR6SybmFtZGml6Twv8AGUrAKQadFlPfijpwGmAKHewghsk2ICBMhFbrTvV7Zc5txSS+iaYDro6IduWaFqJoMDgiAVDeEBlYNtrycp+ekIjeFZRIJqnjToepwdqMuhOcwiv5ofn64JEo7zSoLja4dYbESsFeQ " crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.6/css/font-awesome.min.css"/>
+    <style>
+        .custom-range {
+    width: 100%;
+    background-color: #ddd;
+    outline: none;
+}
+
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #4caf50;
+    cursor: pointer;
+}
+
+.custom-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #4caf50;
+    cursor: pointer;
+}
+
+.custom-range::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #4caf50;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h4 class="text-center">Bootstrap ProgressBar Form</h4>
+                <form action="../classes/orders.php" method="POST">
+                    <div class="form-group">
+                        <label for="id">ID</label>
+                        <input name="id" type="text" class="form-control" id="id" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <input type="text" class="form-control" id="type" name="type">
+                    </div>
+                    <div class="form-group">
+                        <label for="tech_id">Tech ID</label>
+                        <input type="text" class="form-control" id="tech_id" name="tech_id">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer_id">Customer ID</label>
+                        <input type="text" class="form-control" id="customer_id" name="customer_id">
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        
+                        <input type="range" class="form-control custom-range" id="status" name="status">
+                        <div class="progress" hidden>
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                                0%
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

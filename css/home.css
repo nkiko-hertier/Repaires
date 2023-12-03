@@ -1,0 +1,45 @@
+.top-slider{
+    background-image: linear-gradient(#f300007d, #ff9d0099), url(../img/full.webp);
+    background-size: cover
+}
+.quotes{
+    font-weight: 500;
+    position: relative;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.quote{
+    color: #232332a0;
+}
+.title{
+    padding: 30px 10px;
+    background-color: rgb(25, 81, 165);
+    color: #fff;
+}
+.s-window-container{
+    margin: 20px;
+}
+.s-window-container .tabs{
+    background-color: rgb(243, 123, 55);
+    color: #fff;
+}
+.s-tab-data{
+    border-bottom: 5px solid rgb(255, 94, 0);
+}
+.flex-top-s-around{
+    flex-wrap: wrap;
+}
+.s-window-container .tabs .span{
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+.s-window-container .tabs .span:hover{
+    background-color: rgb(183 93 42);
+}
+.s-window-container .tabs .span:focus{
+    background-color: rgb(183 93 42);
+}
+.s-box-content .u-text{
+    font-size: 16px;
+}

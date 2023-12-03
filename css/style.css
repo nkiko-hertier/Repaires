@@ -1,0 +1,456 @@
+*{
+    padding: 0;
+    margin: 0;
+    transition: 0.35s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ /*additional styles*/
+ .min-sec-height{
+    min-height: 500px;
+ }   
+.swiper {
+  width: 100%;
+  height: 100%;
+
+}
+.fit-width{
+    width: fit-content;
+}
+.swiper-slide {
+  text-align: center;
+  background-size: cover;
+  font-size: 18px;
+  display: flex;
+  background-image: linear-gradient(#232332, #23233299);
+  min-height: 600px;
+}
+.f-width{
+    width: 100%;
+}
+.f-height{
+    height: 100%;
+}
+p{
+    font-size: 20px;
+}
+.s-line span{
+    height: 1px;
+    width: 90%;
+    background-color: #232332;
+}
+.s-grey-text{
+    color: #7e7e7e;
+}
+.s-green-color{
+    color: rgb(117, 206, 117);
+}
+.s-green-color:hover{
+    color: rgb(68, 207, 68);
+}
+.s-overflowY{
+    overflow-y: auto;
+}
+.s-overflowX{
+    overflow-x: auto;
+}
+.u-text{
+    font-size: 20px;
+}
+.top-slider{
+    overflow-x: auto;
+    
+}
+.dropdown-menu .dropdown-item{
+    color: #fff;
+}
+.dropdown-menu .dropdown-item:hover{
+    color: #fff;
+    padding-left: 25px;
+    background-color: #11111e;
+}
+.sec-back{
+    background-color: #2b2b4b;
+}
+.s-transparent{
+    opacity: 0.2;
+}
+.s-margin10{
+    margin: 10;
+}
+.s-margin2{
+    margin: 10px 20px;
+}
+.buy-btn{
+    background-color: #232332;
+    padding: 5px 10px;
+}
+.form-btn{
+    background-color: #232332;
+    padding: 10px 20px;
+    border: none;
+}
+.s-pointer{
+    cursor: pointer;
+}
+.s-shadow{
+    box-shadow: 0px 0px 20px 0px #00000025;
+}
+.s-btn-oposite{
+    background-color: #232332;
+    border-radius: 10px;
+}
+.circle-icon{
+    background-color: #232332;
+    color: #fff;
+    padding: 15px;
+    margin-right: 20px;
+}
+.s-btn-oposite:nth-child(2){
+    background: #ffffff1a;
+    backdrop-filter: blur(5px);
+}
+.column .items{
+    padding: 0px 10px;
+}
+.column{
+    border-bottom: 1px solid #7878bf;
+    margin: 0px 10px;
+    padding: 40px 0px 20px 0px;
+}
+.light-text{
+    color: #a5a5da;
+    margin: 0px 3px;
+}
+.light-text:hover{
+    color: #fff;
+}
+:any-link{
+    text-decoration: none;
+}
+.dark-back{
+    background-color: #232332;
+    color: #fff;
+}
+.f-border{
+    border-radius: 50%;
+}
+.s-bold{
+    font-weight: 600;
+}
+.s-row{
+    width: 100%;
+}
+.s-white{
+    color: #fff;
+}
+.s-text-link{
+    text-decoration: none;
+}
+.s-padd1{
+    padding: 5px;
+}
+.s-top-section{
+    min-height: 600px;
+}
+.line-height-o{
+    line-height: 1px;
+}
+.s-upper-text{
+    text-transform: uppercase;
+}
+.s-huge-text{
+    font-size: 50px;
+}
+.s-padd12{
+    padding: 10px 20px;
+}
+.s-padd1{
+    padding: 10px;
+}
+.s-padd{
+    padding: 5px;
+}
+.btn-container{
+    padding: 20px 0px;
+}
+.btn-container .btn{
+    padding: 10px 15px;
+    margin-right: 5px;
+}
+.s-margin{
+    margin: 10px;
+}
+.l-margin{
+    margin: 3px;
+}
+.s-padd20{
+    padding: 40px 20px;
+}
+.s-product-box{
+    height: 500px;
+    width: 260px;
+    margin: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.204);
+}
+.cover-back{
+    background-size: cover;
+}
+.s-product-box .s-product-cover{
+    height: 200px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/massage-on-back-1296-728-header.jpg');
+}
+.s-gallery-card{
+    padding: 20px;
+    border-radius: 20px;
+    background-size: cover;
+    margin: 10px;
+}
+.s-gallery-card:nth-child(1) *{
+    opacity: -1;
+}
+.s-gallery-card:nth-child(1){
+    background-image: linear-gradient(-45deg, #242441d4, #1d1d30e1), url('../img/sparomance_body1.jpg');
+    background-position: center;
+}
+.s-gallery-card:nth-child(2){
+    background-image: linear-gradient(45deg, #15156f5d, #313151b3);
+    background-position: center;
+}
+.s-border{
+    border-radius: 10px;
+}
+.nav-head{
+    padding: 15px;
+    background-color: #232332;
+}
+.social-container i{
+    color: #fff;
+}
+.main-nav{
+    padding: 20px 15px;
+}
+.main-nav .logo img{
+    width: 100px;
+    height: auto;
+}
+.main-nav .links ul li{
+    list-style-type: none;
+    padding: 10px;
+}
+.main-nav .links ul li a{
+    color: #232332;
+}
+.main-nav 
+.links ul li a:hover{
+    color: #1717b2;
+}
+.align-center{
+    text-align: center;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+
+.nav-target{
+    position: fixed;
+    left: 0%;
+  }
+#nav{
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(#0c0c27de, #0c0c27de), url('<?=$root ?>assets/img/cover.jpg');
+    background-size: cover;
+    background-position: top;
+    box-shadow: none;
+    position: fixed;
+    z-index: 100;
+    left: -100%;
+    height: 100vh;
+    padding: 0;
+  }
+  #nav .nav .bottom .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #nav :any-link{
+    text-decoration: none;
+    color: #fff;
+  }
+  #nav p a:hover{
+    color: red;
+  }
+  #nav p{
+    color: #fff;
+  }
+  #nav .links{
+    height: 50%;
+    flex-direction: column;
+  }
+  #nav  .bars i:hover{
+    transform: rotateZ(180deg);
+  }
+  li{
+    list-style-type: none;
+    text-align: center;
+  }
+  #nav ul li{
+    padding: 10px;
+    width: fit-content;
+    border-bottom: 1px solid #616060;
+  }
+  #nav ul{
+    flex-direction: column;
+  }
+  #nav ul li:hover a{
+    color: red;
+    padding: 0px 40px;
+  }
+  .nav-target ul li:nth-child(1){
+    animation-name: anm1;
+    animation-duration: 1.35s;
+    animation-delay: 0.35s;
+  }
+  .nav-target ul li:nth-child(2){
+    animation-name: anm1;
+    animation-duration: 1.35s;
+    animation-delay: 0.55s;
+  }
+  .nav-target ul li:nth-child(3){
+    animation-name: anm1;
+    animation-duration: 1.35s;
+    animation-delay: 0.75s;
+  }
+  .nav-target ul li:nth-child(4){
+    animation-name: anm1;
+    animation-duration: 1.35s;
+    animation-delay: 0.95s;
+  }
+  .nav-target ul li:nth-child(5){
+    animation-name: anm1;
+    animation-duration: 1.35s;
+    animation-delay: 1.15s;
+  }
+  @keyframes anm1 {
+    50%{
+      padding-left: 30px;
+    }
+  }
+#nav .link{
+    text-decoration-color: none;
+    color: #1b1a1a;
+}
+.mob-show600{
+    display: none;
+}
+  
+@media (max-width: 600px) {
+    .mob-show600{
+        display: block;
+    }
+    .mob-wrap600{
+        flex-wrap: wrap;
+    }
+    .cards-conatiner .card{
+        width: 80%;
+    }
+    .form-container{
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    .mob-hide600{
+        display: none
+    }
+    .mob-f-width{
+        width: 100%;
+    }
+    .contact-from .container{
+        flex-wrap: wrap;
+    }
+    .mob-scale400{
+        scale: 0.3;
+        box-shadow: 0px 0px 20px 0px;
+        width: 400px;
+    }
+    .s-gallery-card:nth-child(2){
+        display: none;
+    }
+    .s-gallery-card:nth-child(1) *{
+        opacity: 2;
+    }
+    .contact-from .container{
+        flex-wrap: wrap;
+    }
+    .flex-top-s-around{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+@media (max-width: 400px) {
+    .mob-hide400{
+        display: none
+    }
+    .swiper-slide .container {
+        text-align: left;
+    }
+    .mob-block400{
+        display: block;
+        width: fit-content;
+        margin: 10px 0px;
+    }
+    .c-form form{
+        min-width: none;
+    }
+    .btn-container .btn{
+        display: block;
+        width: fit-content;
+        margin: 10px 0px;
+    }
+    .copyright{
+        font-size: 15px;
+    }
+    .u-text{
+        font-size: 14px;
+    }
+}
+@media (max-width: 800px) {
+    .contacts{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .mob-hide800{
+        display: none;
+    }
+.c-form form{
+    min-width: none;
+    width: 200px;
+}
+.u-text{
+    font-size: 17px;
+}
+}
+@media (min-width: 600px) {
+    .cardrow{
+        height: 500px;
+        width: 100%;
+    }
+}
+@media (min-width: 800px) {
+    .cards-conatiner .card{
+        width: 500px;
+        margin: 5px;
+    }
+}
+
+@media (min-width: 400px) {
+    .pc-hide400{
+        display: none;
+    }
+    .swiper-slide .container{
+        width: 80%;
+    }
+}

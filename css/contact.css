@@ -1,0 +1,44 @@
+.top-slider{
+    background-image: linear-gradient(#232332, #23233299), url(../img/sparomance_body1.jpg);
+    background-size: cover
+}
+.form-group input, textarea{
+    display: block;
+    width: 100%;
+    resize: vertical;
+    padding: 10px;
+}
+.form-group textarea{
+    height: 110px;
+    resize: none;
+}
+.form-group{
+    padding: 10px 0px;
+}
+.c-form form{
+    width: 100%;
+}
+.c-form{
+    width: 100%;
+    border: 1px solid #0000004e;
+}
+.contact-cards{
+    padding: 40px 0px;
+}
+.color-dark{
+    color: #4c4cbc;
+}
+.contact-form{
+    padding: 40px 0px;
+}
+.maps{
+    position: relative;
+}
+.maps .card{
+    position: absolute;
+    background: #fff;
+    scale: 0.6;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
