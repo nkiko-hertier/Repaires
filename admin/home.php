@@ -1,8 +1,15 @@
 <?php
-    include 'php/conn.php';
+session_start();
+include 'php/conn.php';
+include 'php/autho.php';
+$filter_query = '';
+if ($_SESSION['type'] == 1) {
+    $filter_query = "WHERE `tech_id`='{$_SESSION['uid']}'";
+}
     $users = mysqli_query($conn, "SELECT * FROM `users`");
     mysqli_data_seek($users, 0);
-    $orders = mysqli_query($conn, "SELECT * FROM `orders`");
+    $sql = "SELECT * FROM `orders` " . $filter_query;
+    $orders = mysqli_query($conn, $sql);
     mysqli_data_seek($orders, 0);
 ?>
 <?php
@@ -31,6 +38,8 @@ if ($_GET['order']) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../libs/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="../libs/nicepage/main.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/flex.css">
 </head>
 <style>
     body {
@@ -66,6 +75,9 @@ html{
 @media (max-width: 999px) {
     .sidebar{display: none;}
     /* sidebar*/
+}
+.home-cover{
+    min-height: 400px;
 }
 </style>
 <body>
@@ -131,8 +143,12 @@ html{
             <!--Main Content-->
             <main role="main" class="dash-main col-12 ml-sm-auto col-lg-10 px-4">
                 <div id="home" class="section">
-                    <h2>Dashboard</h2>
-                    <p>Welcome to the dashboard. Here you can view your recent orders, manage your products, view your customers and manage your reports.</p>
+                    <div class="home-cover flex-center column-flex h1 align-center container s-border" style="background-image: linear-gradient(#ffffffa6,#ffffffa6),url(../assets/img/dash-home.jpg); background-size: cover;">
+                        <h2>Dashboard</h2>
+                        <p>
+                            Welcome to the dashboard. Here you can view your recent orders, manage your products, view your customers and manage your reports.
+                        </p>
+                    </div>
                 </div>
                 <!-- Add your dashboard content here -->
                 <!-- Manage users-->
@@ -272,7 +288,7 @@ html{
                                 <td><?= $user['type'] ?></td>
                                 <td>
                                     <a href="home.php?user=<?= $user['id'] ?>" class="btn btn-dark"><i class="fa fa-pen mr-2"></i>Edit</a>
-                                    <a href="#" class="btn btn-danger"><i class="fa fa-trash-alt"></i></a>
+                                    <a href onclick="ConfirmAction('link.php', 'user')" class="btn btn-danger"><i class="fa fa-trash-alt"></i></a>
                                 </td>
                            </tr>
                             <?php endwhile; ?>
@@ -289,6 +305,12 @@ html{
         </div>
     </div>
     <script>
+        function ConfirmAction(link, type) {
+            if(confirm('Are You sure you want to delete this '+'type'+' permanently?')) 
+                {
+                    console.log('Done'); 
+                }
+        }
         function DashScroll(element) {
             document.querySelector(element).scrollIntoView();
             scrollTo(0,0);

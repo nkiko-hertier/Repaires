@@ -23,7 +23,7 @@ if (isset($_SESSION['uname'])) {
         }
     </style>
 </head>
-<body class="flex-center" onload="SendMe('login.php', 'login')">
+<body class="flex-center" onload="SendMe('home.php', '#login')">
     <div class="container col-lg-4 shadow s-padd12 s-border">
         <form action="./php/login.php?r=login" method="post" id="login">
             <div class="form-group">
@@ -54,6 +54,6 @@ if (isset($_SESSION['uname'])) {
             </div>
         </form>
     </div>
-        <script src="../js/submit.js"></script>
+        <script src="./js/submit.js"></script>
 </body>
 </html>
