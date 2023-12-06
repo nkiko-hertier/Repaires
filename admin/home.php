@@ -79,12 +79,42 @@ html{
 .home-cover{
     min-height: 400px;
 }
+.user.btn-group a:nth-child(1){
+    transition: 0.35s;
+    width: 0px;
+    padding: 0rem 0rem;
+    overflow: hidden;
+}
+.user.btn-group:hover a:nth-child(1){
+    padding: 0.375rem 0.75rem;
+    width: 100px;
+    overflow: unset;
+    cursor: pointer;
+}
+.user.btn-group{
+    position: fixed;
+    bottom: 3%;
+    z-index: 10000;
+    right: 5%;
+    width: fit-content;
+}
 </style>
 <body>
+    
+    <div class="user btn-group flex-end">
+        <a href="" class="btn btn-primary">
+            <i class="fa fa-user"></i>
+            <?=$_SESSION['uname']?>
+        </a>
+        <a href="" class="btn btn-danger">
+            <i class="fa fa-power-off"></i>
+        </a>
+    </div>
     <!--Header-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Dashboard</a>
+            <div class="navbar-brand">
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -110,7 +140,7 @@ html{
         <div class="row">
             <!--Sidebar-->
             <nav class="col-md-2 bg-light sidebar">
-                <div class="sidebar-sticky">
+                <div class="sidebar-sticky" style="position: relative;">
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a onclick="DashScroll('.dash-main #home')" class="nav-link active" href="#">
@@ -143,7 +173,7 @@ html{
             <!--Main Content-->
             <main role="main" class="dash-main col-12 ml-sm-auto col-lg-10 px-4">
                 <div id="home" class="section">
-                    <div class="home-cover flex-center column-flex h1 align-center container s-border" style="background-image: linear-gradient(#ffffffa6,#ffffffa6),url(../assets/img/dash-home.jpg); background-size: cover;">
+                    <div class="home-cover flex-center column-flex h1 align-center container s-border" style="box-shadow:inset -27px 30px 12px 20px #0000008a; background-image: linear-gradient(#ffffffa6,#ffffffa6),url(../assets/img/dash-home.jpg); background-size: cover;">
                         <h2>Dashboard</h2>
                         <p>
                             Welcome to the dashboard. Here you can view your recent orders, manage your products, view your customers and manage your reports.
