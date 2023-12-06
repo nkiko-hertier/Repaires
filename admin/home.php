@@ -19,9 +19,14 @@ if ($_GET['order']) {
     $query = mysqli_query($conn, "SELECT * FROM `orders` WHERE `id`='$id'");
     mysqli_data_seek($orders, 0);
     $Torder = mysqli_fetch_assoc($query);
-} else if ($_GET['user']) {
+} else if ($_GET['user'] && ($_SESSION['type'] == 0)) {
     $id = $_GET['user'];
     $query = mysqli_query($conn, "SELECT * FROM `users` WHERE `id`='$id'");
+    mysqli_data_seek($orders, 0);
+    $user = mysqli_fetch_assoc($query);
+} elseif (($_SESSION['type'] !== 0)) {
+    $id = $_SESSION['uid'];
+    $query = mysqli_query($conn, "SELECT * FROM `users` WHERE `uid`='$id'");
     mysqli_data_seek($orders, 0);
     $user = mysqli_fetch_assoc($query);
 }
@@ -185,7 +190,7 @@ html{
                 <div id="addusers" class="section container">
                     <h2>Manage Users</h2>
                     <form action="../classes/user.php" method="POST">
-                        <div class="form-group">
+                        <div class="form-group" hidden>
                             <label for="id">ID:</label>
                             <input type="text" class="form-control" name="id" placeholder="Enter ID" readonly value="<?=(isset($user))? $user['id'] : '' ?>">
                         </div>
@@ -240,9 +245,10 @@ html{
                             </tr>
                         </thead>
                         <tbody>
+                            <?php $i = 1; ?>
                             <?php while ($product = mysqli_fetch_assoc($orders)) : ?>
                             <tr>
-                                <td><?= $product['id'] ?></td>
+                                <td><?= $i ?></td>
                                 <td><?= $product['uid'] ?></td>
                                 <td><?= $product['name'] ?></td>
                                 <td><?= $product['customer_id'] ?></td>
@@ -252,6 +258,7 @@ html{
                                     <a href="#" class="btn btn-danger"><i class="fa fa-trash-alt"></i></a>
                                 </td>
                             </tr>
+                            <?php $i++; ?>
                             <?php endwhile; ?>
                         </tbody>
                     </table>
@@ -306,7 +313,9 @@ html{
                                 <th scope="col">Username</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Type</th>
+                                <?php if ($_SESSION['type'] == 0) : ?>
                                 <th scope="col">Action</th>
+                                <?php endif ?>
                             </tr>
                         </thead>
                         <tbody>
@@ -316,10 +325,12 @@ html{
                                 <td><?= $user['uname'] ?></td>
                                 <td><?= $user['email'] ?></td>
                                 <td><?= $user['type'] ?></td>
+                                <?php if ($_SESSION['type'] == 0) : ?>
                                 <td>
                                     <a href="home.php?user=<?= $user['id'] ?>" class="btn btn-dark"><i class="fa fa-pen mr-2"></i>Edit</a>
                                     <a href onclick="ConfirmAction('link.php', 'user')" class="btn btn-danger"><i class="fa fa-trash-alt"></i></a>
                                 </td>
+                                <?php endif ?>
                            </tr>
                             <?php endwhile; ?>
                         </tbody>
