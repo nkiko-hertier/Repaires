@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/flex.css">
     <title>Check progress</title><style>
+        body{
+            background-image: url(./images/covers/cover\ \(1\).jpg);
+            background-size: cover;
+            height: 100vh;
+        }
         .box-icon{
             height: 150px;
             width: 150px;
@@ -31,6 +36,11 @@
             width: 50%;
             animation: load 3s 1;
         }
+        .blur{
+            padding: 10px;
+            backdrop-filter: blur(10px);
+            height: 100vh;
+        }
         @keyframes load {
             0%{
                 width: 0%;
@@ -43,23 +53,25 @@
     </style>
 </head>
 <body>
-    <div class="container card mt-3 shadow-lg">
-        <form action="./php/Search.php" method="post" id="sorter">
-            <div class="form-group mt-3">
-                <h1>Check progress</h1>
-            </div>
-            <div class="form-group mb-4 mt-2">
-                <div class="input-group">
-                    <input type="text" class="form-control" name="q" placeholder="Enter your username">
-                    <button class="btn btn-primary">Search</button>
+    <div class="blur">
+        <div class="container card mt-3 shadow-lg">
+            <form action="./php/Search.php" method="post" id="sorter">
+                <div class="form-group mt-3">
+                    <h1>Check progress</h1>
                 </div>
+                <div class="form-group mb-4 mt-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="q" placeholder="Enter your username">
+                        <button class="btn btn-primary" style="background-color: blueviolet;">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container card mt-3 s-padd s-border shadow-lg">
+            <h1 class="m-3">Result</h1>
+            <div class="results" id="result">
+                <div class="spinner flex-center p-5 ">No search Found</div>
             </div>
-        </form>
-    </div>
-    <div class="container card mt-3 s-padd s-border shadow-lg">
-        <h1 class="m-3">Result</h1>
-        <div class="results" id="result">
-            <div class="spinner flex-center p-5 ">No search Found</div>
         </div>
     </div>
     <script src="./admin/js/Poper.js"></script>
