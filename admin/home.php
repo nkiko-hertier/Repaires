@@ -117,7 +117,7 @@ html{
     </div>
     <!--Header-->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="navbar-brand">
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -144,11 +144,11 @@ html{
     <div width="100%">
         <div class="row">
             <!--Sidebar-->
-            <nav class="col-md-2 bg-light sidebar">
+            <nav class="col-md-2 sidebar" style="background:#232323;">
                 <div class="sidebar-sticky" style="position: relative;">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a onclick="DashScroll('.dash-main #home')" class="nav-link active" href="#">
+                    <ul class="nav navbar navbar-light  flex-column">
+                        <li class="nav-item active">
+                            <a onclick="DashScroll('.dash-main #home')" class="nav-link" href="#">
                                 <span data-feather="home"></span>
                                 Dashboard <span class="sr-only">(current)</span>
                             </a>
